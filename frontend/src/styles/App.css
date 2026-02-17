@@ -1,1 +1,273 @@
-ÿþ
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: #f0f2f5;
+  color: #333;
+}
+
+.app-header {
+  background: #1F5C99;
+  color: white;
+  padding: 16px 32px;
+}
+
+.app-header h1 {
+  font-size: 1.6rem;
+}
+
+.app-main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.ticket-form {
+  background: white;
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: 0 1px 4px rgba(0,0,0,.12);
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 16px;
+}
+
+.form-field label {
+  font-weight: 600;
+  font-size: .9rem;
+}
+
+.form-field input,
+.form-field textarea,
+.form-field select {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.submit-btn {
+  background: #1F5C99;
+  color: white;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background: #174d85;
+}
+
+.submit-btn:disabled {
+  background: #aaa;
+  cursor: not-allowed;
+}
+
+.error-banner {
+  background: #fee;
+  color: #c00;
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+
+.suggestion-banner {
+  background: #e8f5e9;
+  color: #2e7d32;
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+  font-size: .9rem;
+}
+
+.classifying {
+  color: #888;
+  font-size: .8rem;
+  font-weight: normal;
+}
+
+.filter-bar {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.filter-bar select,
+.filter-bar input {
+  padding: 6px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.search-input {
+  flex: 1;
+  min-width: 200px;
+}
+
+.filter-bar button {
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+.ticket-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.ticket-card {
+  background: white;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 1px 3px rgba(0,0,0,.1);
+  border-left: 4px solid #ccc;
+}
+
+.ticket-card.priority-critical { border-left-color: #c62828; }
+.ticket-card.priority-high { border-left-color: #ef6c00; }
+.ticket-card.priority-medium { border-left-color: #1565c0; }
+.ticket-card.priority-low { border-left-color: #2e7d32; }
+
+.ticket-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 8px;
+}
+
+.ticket-title {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.ticket-badges {
+  display: flex;
+  gap: 6px;
+}
+
+.badge {
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: .75rem;
+  font-weight: 600;
+  background: #e0e0e0;
+}
+
+.priority-badge-critical { background: #ffcdd2; color: #c62828; }
+.priority-badge-high { background: #ffe0b2; color: #e65100; }
+.priority-badge-medium { background: #bbdefb; color: #1565c0; }
+.priority-badge-low { background: #c8e6c9; color: #1b5e20; }
+
+.ticket-desc {
+  font-size: .9rem;
+  color: #555;
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+
+.ticket-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ticket-time {
+  font-size: .8rem;
+  color: #888;
+}
+
+.status-select {
+  padding: 4px 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: .85rem;
+}
+
+.stats-dashboard {
+  background: white;
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: 0 1px 4px rgba(0,0,0,.12);
+}
+
+.stats-row {
+  display: flex;
+  gap: 16px;
+  margin: 16px 0;
+}
+
+.stat-box {
+  flex: 1;
+  background: #f5f7fa;
+  border-radius: 8px;
+  padding: 16px;
+  text-align: center;
+}
+
+.stat-num {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1F5C99;
+  display: block;
+}
+
+.breakdown-row {
+  display: flex;
+  gap: 32px;
+  margin-top: 16px;
+}
+
+.breakdown {
+  flex: 1;
+}
+
+.breakdown h4 {
+  font-size: .9rem;
+  margin-bottom: 8px;
+  color: #555;
+}
+
+.breakdown-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+  font-size: .85rem;
+}
+
+.breakdown-label {
+  width: 70px;
+  text-transform: capitalize;
+}
+
+.breakdown-bar {
+  height: 10px;
+  background: #1F5C99;
+  border-radius: 4px;
+  transition: width .3s;
+}
+
+.empty-state {
+  text-align: center;
+  color: #888;
+  padding: 40px;
+}

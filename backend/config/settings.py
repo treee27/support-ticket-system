@@ -1,5 +1,9 @@
 import os
 from pathlib import Path
+from dotenv import load_dotenv
+
+load_dotenv()
+
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -32,9 +36,15 @@ DATABASES = {
         'PORT': os.environ.get('POSTGRES_PORT', '5432'),
     }
 }
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
 
 ROOT_URLCONF = 'config.urls'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-LLM_API_KEY = os.environ.get('ANTHROPIC_API_KEY', '')
+LLM_API_KEY = os.environ.get('API_KEY', '')

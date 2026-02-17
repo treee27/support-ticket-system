@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+
+# Virtual environment
+backend/venv/
+
+# Django
+db.sqlite3
+*.log
+
+# Environment variables — NEVER commit this
+.env
+
+# Node
+frontend/node_modules/
+frontend/build/
+
+# Docker
+.docker/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+backend/.env
+package.json
+node_modules
